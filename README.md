@@ -67,13 +67,13 @@ string decrypted = WhatLoll.DecryptV2(encrypted);
 
 | Метод | Параметры | Возвращает | Описание |
 |---------|---------------|---------------|------------|
-| EncryptV1(string input) | Текст | string | Шифрование V1 |
-| EncryptV2(string input) | Текст | string | Шифрование V2 (рекомендуется) |
-| DecryptV1(string input) | Шифр | string | Дешифрование V1 |
-| DecryptV2(string input) | Шифр | string | Дешифрование V2 |
-| DecryptAuto(string input) | Шифр | string | Автоопределение версии |
-| Encrypt(string input, WhatLollVersion version) | Текст + версия | string | Универсальное шифрование|
-| Decrypt(string input, WhatLollVersion version) | Шифр + версия | string | Универсальное дешифрование |
+| ```EncryptV1(string input)``` | Текст | string | Шифрование V1 |
+| ```EncryptV2(string input)``` | Текст | string | Шифрование V2 (рекомендуется) |
+| ```DecryptV1(string input)``` | Шифр | string | Дешифрование V1 |
+| ```DecryptV2(string input)``` | Шифр | string | Дешифрование V2 |
+| ```DecryptAuto(string input)``` | Шифр | string | Автоопределение версии |
+| ```Encrypt(string input, WhatLollVersion version)``` | Текст + версия | string | Универсальное шифрование|
+| ```Decrypt(string input, WhatLollVersion version)``` | Шифр + версия | string | Универсальное дешифрование |
 
 ## Вспомогательные методы
 ``` csharp
