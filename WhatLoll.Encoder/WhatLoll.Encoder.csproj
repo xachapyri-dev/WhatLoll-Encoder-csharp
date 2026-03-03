@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Полная поддержка всех платформ -->
+    <TargetFrameworks>net461;net462;net47;net471;net472;net481;net48;netcoreapp3.1;net5.0;net6.0;net7.0;net8.0;net9.0;net10.0;netstandard2.0;netstandard2.1</TargetFrameworks>
+    
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\WhatLoll.Encoder.xml</DocumentationFile>
+    
+    <!-- Version info -->
+    <Version>2.2.0</Version>
+    <FileVersion>2.2.0.0</FileVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    
+    <Authors>Whatloll, Хачапури dev</Authors>
+    <Company>Хачапури dev</Company>
+    <Product>WhatLoll Encoder</Product>
+    <Description>Библиотека для шифрования и дешифрования текста по таблицам замен WhatLoll. Полная поддержка всех платформ: .NET Framework 4.6.1+, .NET Core 3.1+, .NET 5.0+, .NET Standard 2.0+.</Description>
+    <Copyright>Хачапури dev Copyright © 2024-2026, WhatLoll Copyright © 2024-2026</Copyright>
+    
+    <!-- Теги для поиска на NuGet -->
+    <PackageTags>encryption;decryption;cipher;whatloll;шифрование;дешифрование;netframework;netcore;net5;net6;net7;net8;net9;net10;netstandard;cross-platform;substitution-cipher</PackageTags>
+    
+    <RepositoryUrl>https://github.com/xachapyri-dev/WhatLoll-Encoder-csharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/xachapyri-dev/WhatLoll-Encoder-csharp</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    
+    <!-- Отключаем генерацию AssemblyInfo из старого стиля -->
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <!-- Для .NET Framework добавляем ссылки -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net461' OR '$(TargetFramework)' == 'net462' OR '$(TargetFramework)' == 'net48'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
+  </ItemGroup>
+
+  <!-- Для .NET Core -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+    <!-- Для .NET Core 3.1 дополнительные ссылки не требуются -->
+  </ItemGroup>
+
+  <!-- Для .NET 5+ -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0' OR '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' OR '$(TargetFramework)' == 'net8.0' OR '$(TargetFramework)' == 'net9.0' OR '$(TargetFramework)' == 'net10.0'">
+    <!-- Для .NET 5+ дополнительные ссылки не требуются -->
+  </ItemGroup>
+
+  <!-- Для .NET Standard -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'netstandard2.1'">
+    <!-- Для .NET Standard дополнительные ссылки не требуются -->
+  </ItemGroup>
+
+</Project>
