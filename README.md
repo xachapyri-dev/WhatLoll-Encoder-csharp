@@ -17,6 +17,10 @@
 
 ---
 
+## Установка
+| Nuget | GitHub Realese |
+|-------|----------------|
+| ```dotnet add package WhatLoll.Encoder```| [Latest Update](https://github.com/xachapyri-dev/WhatLoll-Encoder-csharp/releases/latest) |
 ##  Возможности
 
 ###  Две версии шифрования
